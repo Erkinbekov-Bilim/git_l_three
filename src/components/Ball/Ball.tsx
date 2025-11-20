@@ -1,4 +1,5 @@
 import type React from "react";
+import "./Ball.css";
 
 interface IBallProps {
   number: number;
@@ -6,9 +7,9 @@ interface IBallProps {
 
 const Ball: React.FC<IBallProps> = ({ number }) => {
   return (
-    <div>
-      <p>{number}</p>
-    </div>
+    <>
+      <div className="ball">{number}</div>
+    </>
   );
 };
 

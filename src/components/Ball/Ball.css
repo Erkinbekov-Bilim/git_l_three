@@ -1,0 +1,17 @@
+.ball {
+  cursor: pointer;
+  border: 2px solid white;
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  background-color: inherit;
+  transition: all 0.2s ease-in;
+}
+
+.ball:hover {
+  background-color: #666594;
+}

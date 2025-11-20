@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Ball from "../Ball/Ball";
+import "./Balls.css";
 
 const Balls = () => {
   const [numbers, setNumbers] = useState<number[]>([5, 11, 16, 23, 32]);
@@ -17,18 +18,27 @@ const Balls = () => {
       newNumberArray.push(generateRandomNumber(5, 36));
     }
 
-    setNumbers(newNumberArray);
+    const sortedNumberArray = newNumberArray.sort((a, b) => a - b);
+    setNumbers(sortedNumberArray);
   };
 
   return (
-    <div>
-      <button className="rna" onClick={getRandomNumber} type="button">
-        Get random
-      </button>
-      {numbers.map((number, index) => (
-        <Ball key={index} number={number} />
-      ))}
-    </div>
+    <>
+      <div className="section-balls">
+        <button
+          className="btn-random-number"
+          onClick={getRandomNumber}
+          type="button"
+        >
+          Get random
+        </button>
+        <div className="block-balls">
+          {numbers.map((number, index) => (
+            <Ball key={index} number={number} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

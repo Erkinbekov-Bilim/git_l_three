@@ -18,7 +18,7 @@ const Balls = () => {
       newNumberArray.push(generateRandomNumber(5, 36));
     }
 
-    const sortedNumberArray = newNumberArray.sort((a, b) => a - b);
+    const sortedNumberArray: number[] = newNumberArray.sort((a, b) => a - b);
     setNumbers(sortedNumberArray);
   };
 
